@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--All links to scripts and stylesheets should sit in this section-->
+<head>
+
+	<title>Leaflet Map</title>
+	<SCRIPT language="JavaScript" type="text/JavaScript" src="script.js"></SCRIPT>
+	<SCRIPT language="JavaScript" type="text/JavaScript" src="script2.js"></SCRIPT>
+	<SCRIPT language="JavaScript" type="text/JavaScript" src="script3.js"></SCRIPT>
+	<SCRIPT language="JavaScript" type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></SCRIPT> 
+	<link rel="stylesheet" media="all" href="map_style.css" type="text/css">
+	<!--This is a link to the Leaflet stylesheet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+	<!--This is a link to the Leaflet JS library-->
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<!--This is a link to the stylesheet I have created-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<!--Call the function to load initialise the map object -->
+<BODY onload = 'fetchData()'>
+	<div class="pic" style="background-color: #000000"> <img src="1.jpg" alt="university of Leeds"  height="40"> </div>
+		<h2>Block two Submissions:</h2>
+		<h3>
+			Block 2, Task 2.1: Hurricane Tweets Map:A webpage including a map displaying tweets from Hurricane Sandy.  
+		</h3>
+<div id="myDIV3">
+	<nav>
+		<ul >
+			<li ><a href="Leaflet_map_insert.html">Home</a></li>
+			<li ><a href="#">Search</a></li>
+			<li ><a href="#">Delete</a></li>
+		</ul>
+	</nav>		
+</div>
+	<div id='myDIV' >
+		<div id='myDIV2' >	
+			<form id = 'insertData' onsubmit ='return validate();' method ='POST' action ='searchData.php' 	enctype="multipart/form-data">
+				<p class = 'input'>
+					Please use your database log-in credentials to inject messages to database:</p>
+				<p class = 'input' >Username : <input type = 'text' class = 'boxes' name = 'user'></p>
+				<p class = 'input'>Password : <input type = 'text' class = 'boxes' name = 'password'></p>
+				<br />
+				<p class = 'input'>Text Body : <input type = 'text' class = 'boxes' name = 'textBody'></p>
+				<p class = 'input'>Latitude (e.g. 10.0) : <input type = 'text' class = 'boxes' name = 'lat'></p>
+				<p class = 'input'>Longitude (e.g. 10.0) : <input type = 'text' class = 'boxes' name = 'lon'></p>
+				<p class = 'input'>Day (1-31) : <input type = 'text' class = 'boxes' name = 'day'></p>
+				<p class = 'input'>Hour (1-23) : <input type = 'text' class = 'boxes' name = 'hour'></p>
+				<p class = 'input'>Minute (1-59) : <input type = 'text' class = 'boxes' name = 'min'></p>
+				<input type='submit' id ='submit' name = 'Submit' value= 'Submit Form'>
+			</form>
+		</div>
+		
+		<!--The map will appear in this div-->
+		<div id='map' ></div>
+
+	</div>
+	
+	
+	
+	
+	<h2>
+		Function Instruction
+	</h2>
+	<ul>
+		<li>Based on the latitude and longitude tagging maker of the tweet data in pgadmin</li>
+		<li>Clustering of similar makers</li>
+		<li>Users add data according to the input box on the upper left side of the page</li>
+		<li>The number of makers in a given latitude and longitude range is queried by the user based on the input box on the lower left side of the page</li>
+		<li>Users can switch the base map according to the top right corner of the map</li>
+	  </ul>
+
+</BODY>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--All links to scripts and stylesheets should sit in this section-->
+<head>
+	<title>Leaflet Map</title>
+	<!--This is a link to the Leaflet stylesheet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+	<!--This is a link to the Leaflet JS library-->
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<!--This is a link to the stylesheet I have created-->
+	
+</head>
+
+<!--Call the function to load initialise the map object -->
+<BODY onload = 'initialise()'>
+	
+	<!--The map will appear in this div-->
+	<div id="map" style = 'height: 500px; width: 600px;'></div>
+	
+	<SCRIPT type="text/javascript" >
+		
+		//Create the map object and set the centre point and zoom level 
+		var map = L.map('map').setView([51.5, -0.09], 12);
+		
+		//Load tiles from open street map (you maybe have mapbox tiles here- this is fine) 
+		L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution:'Map data ©OpenStreetMap contributors, CC-BY-SA, Imagery ©CloudMade',
+			maxZoom: 18
+		//add the basetiles to the map object	
+		}).addTo(map);
+		var marker = L.marker([51.5, -0.09]);
+		marker1 = marker.addTo(map);
+		marker2 = marker1.bindPopup("<b>Hello world!</b>");
+		// marker3 = marker2.openPopup();
+
+		var circle = L.circle([51.508, -0.11], {
+
+    		color: 'red',
+    		fillColor: '#f03',
+    		fillOpacity: 0.5,
+    		radius: 500
+		}).addTo(map);
+
+
+		var polygon = L.polygon([
+    		[51.509, -0.08],
+    		[51.503, -0.06],
+    		[51.51, -0.047]
+		]).addTo(map);
+		
+		circle.bindPopup("I am a circle.");
+		polygon.bindPopup("I am a polygon.");
+		
+		var popup = L.popup()
+    	.setLatLng([51.513, -0.09])
+    	.setContent("I am a standalone popup.")
+    	.openOn(map);
+
+		// function onMapClick(e) {
+		// 	alert("You clicked the map at " + e.latlng);
+		// 	}
+
+		// map.on('click', onMapClick);
+		
+		// var popup = L.popup();
+
+
+		function onMapClick(e) {
+    		popup
+       			.setLatLng(e.latlng)
+        		.setContent("You clicked the map at " + e.latlng.toString())
+        		.openOn(map);
+}
+		map.on('click', onMapClick);
+    
+		
+	</SCRIPT>
+</BODY>

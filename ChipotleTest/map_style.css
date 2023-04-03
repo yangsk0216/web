@@ -1,0 +1,263 @@
+
+body {
+  background-image: url("picture/10.jpg");
+  background-size: cover;
+}
+nav {
+	display: flex;
+	margin: auto;
+ 
+  }
+  
+  nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+  text-align: center;
+  } 
+  
+   nav li {
+
+  text-align: center;
+	margin-right: 15px;
+  float: left;
+   align-items: center; 
+   
+   } 
+  
+   nav li a {
+    padding: 100px;
+    display: block;
+    color: rgb(0, 0, 0);
+ font-weight: 500;
+    display: flex;
+    text-align: center;
+    padding: 60px 39px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 30px; /* increase font size to 40px */
+  }
+
+  nav li a:hover {
+  padding-bottom: 150px;
+  background-color: #0062cc;
+    
+  }
+
+
+  .container {
+    
+    
+    max-width: 2000px; /* 定义最大宽度 */
+    margin: 0 auto; /* 左右外边距设置为auto，实现水平居中 */
+  }
+
+  #myDIV{
+
+	display: flex; flex-direction: row;
+  
+  }
+
+  #myDIV2{
+    flex: 1.5;
+   
+    background-color:#383737;
+   }
+  
+   #myDIV3 {
+    border: 3px solid #000000;
+    border-collapse: collapse;
+    font-weight: 500;
+    background-color:#007bff; 
+    background-image: linear-gradient(to bottom, #FFD966, #a5d7e8); 
+    height: 150px;  
+  }
+
+
+
+
+.input{
+	color: #ffffff;
+	
+ }
+
+
+ #map{
+	flex: 4; height: 900px; width: 600px;
+  border: 10px solid black;
+  border-collapse: collapse;
+ }
+
+
+.input-label{
+  color: #fff;
+}
+
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+#state{
+  width: 400px;
+  height: 40px;
+  font-size: 18px;
+}
+
+ 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+
+.button-container div {
+  margin-top: 10px;
+}
+
+
+
+.button-container button {
+  width: 200px;
+}
+
+button {
+  
+     margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+  background-color: #0062cc;
+  }
+  
+
+  #formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .input-label {
+    margin-right: 10px;
+  }
+  
+  .input-field {
+    flex: 1;
+  }
+  
+  .boxes {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  #submit {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #submit:hover {
+    background-color: #0062cc;
+  }
+
+
+
+  #information{
+  
+    width: 2000px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    
+    background-color: #DFA67B;
+   
+  }
+
+ 
+	#message1 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 20px 0;
+    
+	}
+
+	#message2 {
+    height: 200px;
+		
+		margin-right: 20px;
+	}
+
+  #message3 {
+    font-size: 20px;
+    background-color: #FFD966;
+    height: 200px;
+    /* width: 50%; */
+    padding: 10px;
+  }
+
+  #message4 {
+    font-size: 20px;
+    background-color: #FFD966;
+    
+    padding: 10px;
+  }
+  
+  
+ 

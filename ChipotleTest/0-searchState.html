@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--All links to scripts and stylesheets should sit in this section-->
+<head>
+
+	<title>Leaflet Map</title>
+	<SCRIPT language="JavaScript" type="text/JavaScript" src="search_data.js"></SCRIPT>
+	<SCRIPT language="JavaScript" type="text/JavaScript" src="statesData.js"></SCRIPT>
+	<SCRIPT language="JavaScript" type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></SCRIPT> 
+
+	<link rel="stylesheet" media="all" href="map_style.css" type="text/css">
+	<!--This is a link to the Leaflet stylesheet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+	<!--This is a link to the Leaflet JS library-->
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<!--Call the function to load initialise the map object -->
+<BODY onload = 'fetchData()'>
+<div class="container">
+<div id="myDIV3">
+	<nav>
+		<ul >
+			
+			<li><img style="width: 523px;" src="picture/14.png" alt=""></li>
+			<li ><a href="0-peopleDensity.html">Chipotle and People Density</a></li>
+			<li ><a href="0-gdp.html">Chipotle and State GDP</a></li>
+			<li ><a href="0-searchState.html">Search Chipotle</a></li>
+			<li ><a href="0-inscert.html"> insert location</a></li>
+		</ul>
+	</nav>		
+</div>
+	<div id='myDIV' >
+		<div id='myDIV2'>	
+			<div id="inputbox">
+			<form id = 'searchData' onsubmit ='return validate();' method ='POST'  enctype="multipart/form-data">
+				<p class = 'input' style="text-align: center; font-size: 25px;padding: 20px;">
+					You can select a state's chipotles from the drop-down menu below to display them on the map
+				</p>
+				<br>
+				<br>
+				
+				<select id="state" name="state" style="text-align: center;display: block; margin: 0 auto;">
+					<option value="Alabama">Alabama</option>
+					<option value="Arizona">Arizona</option>
+					<option value="Arkansas">Arkansas</option>
+					<option value="Arizona">Arizona</option>
+					<option value="California">California</option>
+					<option value="Colorado">Colorado</option>
+					<option value="Connecticut">Connecticut</option>
+					<option value="Delaware">Delaware</option>
+					<option value="Florida">Florida</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Idaho">Idaho</option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kansas">Kansas</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Louisiana">Louisiana</option>
+					<option value="Maine">Maine</option>
+					<option value="Maryland">Maryland</option>
+					<option value="Massachusetts">Massachusetts</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Minnesota">Minnesota</option>
+					<option value="Mississippi">Mississippi</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Montana">Montana</option>
+					<option value="Nebraska">Nebraska</option>
+					<option value="Nevada">Nevada</option>
+					<option value="New Hampshire">New Hampshire</option>
+					<option value="New Jersey">New Jersey</option>
+					<option value="New Mexico">New Mexico</option>
+					<option value="New York">New York</option>
+					<option value="North Carolina">North Carolina</option>
+					<option value="North Dakota">North Dakota</option>
+					<option value="Ohio">Ohio</option>
+					<option value="Oklahoma">Oklahoma</option>
+					<option value="Oregon">Oregon</option>
+					<option value="Pennsylvania">Pennsylvania</option>
+					<option value="Rhode Island">Rhode Island</option>
+					<option value="South Carolina">South Carolina</option>
+					<option value="Tennessee">Tennessee</option>
+					<option value="Texas">Texas</option>
+					<option value="Utah">Utah</option>
+					<option value="Vermont">Vermont</option>
+					<option value="Virginia">Virginia</option>
+					<option value="Washington">Washington</option>
+					<option value="Washington DC">Washington DC</option>
+					<option value="West Virginia">West Virginia</option>
+					<option value="Wisconsin">Wisconsin</option>
+					<option value="Wyoming">Wyoming</option>
+					
+				  </select>
+				
+			</form>
+		
+			<div class="button-container">
+				<div>
+				  <button onclick="search_data()">searchData</button>
+				</div>
+				<div>
+				  <button onclick="location.reload();">clearData</button>
+				</div>
+			</div>
+		</div>  
+			
+		</div>
+		
+		<!--The map will appear in this div-->
+		<div id='map' ></div>
+</div>	
+
+<div id = "information"  style="height: 200px;">
+	
+	contract address:Woodhouse lane,Leeds,West Yourshire,LS29JT,UK
+	<br>
+	© Shuaikang Yang, University of Leeds, 2023 
+	
+</div>
+
+</div>
+
+
+
+
+</BODY>
